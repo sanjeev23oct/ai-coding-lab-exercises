@@ -1,0 +1,11 @@
+{
+  "name": "lab-101-hello-ai",
+  "version": "1.0.0",
+  "description": "AI Coding Lab — Lab 101: Your First AI Coding Conversation",
+  "main": "src/utils.js",
+  "scripts": {
+    "test": "node --test tests/utils.test.js"
+  },
+  "keywords": ["ai-coding-lab", "lab"],
+  "license": "MIT"
+}
