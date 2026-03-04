@@ -1,0 +1,10 @@
+{
+  "name": "Lab 101 — Hello AI",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "npm install -g @google/gemini-cli",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  }
+}
