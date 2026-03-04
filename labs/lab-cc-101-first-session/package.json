@@ -1,0 +1,11 @@
+{
+  "name": "lab-cc-101-first-session",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/server.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

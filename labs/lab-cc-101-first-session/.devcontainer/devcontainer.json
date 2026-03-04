@@ -1,0 +1,28 @@
+{
+  "name": "Lab CC-101: Claude Code First Session",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+
+  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code",
+
+  // Claude Code is pre-configured to use the AI Coding Lab proxy.
+  // Students get full Claude Code functionality powered by DeepSeek/Groq —
+  // no Anthropic subscription needed.
+  "remoteEnv": {
+    "ANTHROPIC_BASE_URL": "https://litellm-proxy.railway.app",
+    "ANTHROPIC_API_KEY": "lab-ai-coding-2026"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  "forwardPorts": [3000]
+}
