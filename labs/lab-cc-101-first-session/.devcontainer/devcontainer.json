@@ -2,7 +2,7 @@
   "name": "Lab CC-101: Claude Code First Session",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
 
-  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code",
+  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code && echo '{\"hasCompletedOnboarding\":true,\"numStartups\":1,\"installMethod\":\"global\"}' > ~/.claude.json",
 
   // Claude Code is pre-configured to use the AI Coding Lab proxy.
   // Students get full Claude Code functionality powered by DeepSeek/Groq —
