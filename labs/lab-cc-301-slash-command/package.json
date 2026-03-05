@@ -1,0 +1,8 @@
+{
+  "name": "slash-command-lab",
+  "version": "1.0.0",
+  "description": "Starter project for the Custom Slash Commands lab",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "hooks-lab",
+  "version": "1.0.0",
+  "description": "Starter project for the Hooks Quality Gate lab",
+  "scripts": {
+    "test": "node --test tests/",
+    "lint": "node scripts/lint.js"
+  }
+}
