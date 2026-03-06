@@ -2,7 +2,7 @@
   "name": "Lab CC-301: Build Custom Slash Commands",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
 
-  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{\"hasCompletedOnboarding\":true,\"numStartups\":3,\"installMethod\":\"global\",\"oauthAccount\":null,\"primaryApiKey\":\"lab-ai-coding-2026\"}' > ~/.claude.json && code --install-extension anthropic.claude-code --force && code --install-extension RooVeterinaryInc.roo-cline --force",
+  "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{\"hasCompletedOnboarding\":true,\"numStartups\":3,\"installMethod\":\"global\",\"oauthAccount\":null,\"primaryApiKey\":\"lab-ai-coding-2026\"}' > ~/.claude.json",
 
   "remoteEnv": {
     "ANTHROPIC_BASE_URL": "https://litellm-anthropic-proxy-production.up.railway.app",
