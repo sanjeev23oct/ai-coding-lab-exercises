@@ -27,7 +27,10 @@
         "claudeCode.disableLoginPrompt": true,
         "roo-cline.apiProvider": "anthropic",
         "roo-cline.apiModelId": "claude-sonnet-4-6",
-        "roo-cline.anthropicBaseUrl": "https://litellm-anthropic-proxy-production.up.railway.app"
+        "roo-cline.anthropicBaseUrl": "https://litellm-anthropic-proxy-production.up.railway.app",
+        "workbench.editorAssociations": {
+          "**/README.md": "vscode.markdown.preview.editor"
+        }
       }
     },
     "codespaces": {
