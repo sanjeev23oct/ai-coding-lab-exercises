@@ -10,7 +10,7 @@
 > Open a terminal (**Terminal → New Terminal**) and paste this single command:
 >
 > ```bash
-> echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2026"}' > ~/.claude.json && mkdir -p ~/.claude && echo '{"env":{"ANTHROPIC_API_KEY":"lab-ai-coding-2026","ANTHROPIC_BASE_URL":"https://litellm-anthropic-proxy-production.up.railway.app"}}' > ~/.claude/settings.json
+> echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2030"}' > ~/.claude.json && mkdir -p ~/.claude && echo '{"env":{"ANTHROPIC_API_KEY":"lab-ai-coding-2030","ANTHROPIC_BASE_URL":"https://litellm-anthropic-proxy-production.up.railway.app"}}' > ~/.claude/settings.json
 > ```
 >
 > Then run `claude` — it should open directly without asking for login.

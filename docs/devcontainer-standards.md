@@ -41,7 +41,7 @@ Every CC lab devcontainer must have **all** of the following:
 
 ### 3. `postCreateCommand` — sets env vars and skips onboarding wizard
 ```bash
-npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2026"}' > ~/.claude.json
+npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2030' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2030"}' > ~/.claude.json
 ```
 
 > **Do NOT** add `npm install -g @anthropic-ai/claude-code` here. Claude Code is pre-baked into `labs/Dockerfile` — installing it at runtime costs 2-3 minutes on every Codespace creation.
@@ -51,7 +51,7 @@ npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc &
 ```json
 "remoteEnv": {
   "ANTHROPIC_BASE_URL": "https://litellm-anthropic-proxy-production.up.railway.app",
-  "ANTHROPIC_API_KEY": "lab-ai-coding-2026"
+  "ANTHROPIC_API_KEY": "lab-ai-coding-2030"
 }
 ```
 
@@ -84,11 +84,11 @@ npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc &
     "context": "../../"
   },
 
-  "postCreateCommand": "npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{\"hasCompletedOnboarding\":true,\"numStartups\":3,\"installMethod\":\"global\",\"oauthAccount\":null,\"primaryApiKey\":\"lab-ai-coding-2026\"}' > ~/.claude.json",
+  "postCreateCommand": "npm install && echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2030' >> ~/.bashrc && echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && echo '{\"hasCompletedOnboarding\":true,\"numStartups\":3,\"installMethod\":\"global\",\"oauthAccount\":null,\"primaryApiKey\":\"lab-ai-coding-2030\"}' > ~/.claude.json",
 
   "remoteEnv": {
     "ANTHROPIC_BASE_URL": "https://litellm-anthropic-proxy-production.up.railway.app",
-    "ANTHROPIC_API_KEY": "lab-ai-coding-2026"
+    "ANTHROPIC_API_KEY": "lab-ai-coding-2030"
   },
 
   "customizations": {
@@ -162,18 +162,18 @@ Run these commands in the terminal:
 
 ```bash
 # Set environment variables
-export ANTHROPIC_API_KEY=lab-ai-coding-2026
+export ANTHROPIC_API_KEY=lab-ai-coding-2030
 export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app
 
 # Make them persist across terminal sessions
-echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2026' >> ~/.bashrc
+echo 'export ANTHROPIC_API_KEY=lab-ai-coding-2030' >> ~/.bashrc
 echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc
 
 # Create Claude Code config files
-echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2026"}' > ~/.claude.json
+echo '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"lab-ai-coding-2030"}' > ~/.claude.json
 
 mkdir -p ~/.claude
-echo '{"env":{"ANTHROPIC_API_KEY":"lab-ai-coding-2026","ANTHROPIC_BASE_URL":"https://litellm-anthropic-proxy-production.up.railway.app"}}' > ~/.claude/settings.json
+echo '{"env":{"ANTHROPIC_API_KEY":"lab-ai-coding-2030","ANTHROPIC_BASE_URL":"https://litellm-anthropic-proxy-production.up.railway.app"}}' > ~/.claude/settings.json
 
 # Reload VS Code window
 # Command Palette (Cmd+Shift+P) → "Developer: Reload Window"
