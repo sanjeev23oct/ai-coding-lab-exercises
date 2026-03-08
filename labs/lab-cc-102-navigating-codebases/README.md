@@ -5,15 +5,16 @@
 
 ---
 
-> ## 🚀 First Time Setup — Run This Before Anything Else
+> ## ⚡ Claude Code Setup — One-Time Only
 >
-> Open a terminal (**Terminal → New Terminal**) and paste this single command:
+> Claude Code is pre-configured automatically via your **LAB_TOKEN** Codespace secret.
 >
-> ```bash
-> printf '{"hasCompletedOnboarding":true,"numStartups":3,"installMethod":"global","oauthAccount":null,"primaryApiKey":"%s"}' "$ANTHROPIC_API_KEY" > ~/.claude.json && mkdir -p ~/.claude && printf '{"env":{"ANTHROPIC_API_KEY":"%s","ANTHROPIC_BASE_URL":"https://litellm-anthropic-proxy-production.up.railway.app"}}' "$ANTHROPIC_API_KEY" > ~/.claude/settings.json
-> ```
+> **First time?** Do this once:
+> 1. Go to **[aicodinglab.com](https://aicodinglab.com) → Dashboard** and copy your Lab Token from the AI Credits widget
+> 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`
+> 3. Rebuild this Codespace — Claude Code will be ready automatically for every lab
 >
-> Then run `claude` — it should open directly without asking for login.
+> **Already set up?** Just run `claude` — no login needed.
 
 ---
 

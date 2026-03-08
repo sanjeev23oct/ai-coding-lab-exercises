@@ -4,6 +4,21 @@
 
 ---
 
+## ⚡ Before You Start — Claude Code Setup
+
+Claude Code is pre-installed in this Codespace and configured automatically via your **LAB_TOKEN**.
+
+**First time in any lab?** Do this once:
+1. Go to **[aicodinglab.com](https://aicodinglab.com) → Dashboard** and copy your Lab Token from the AI Credits widget
+2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`
+3. Rebuild this Codespace — Claude Code will be ready automatically for every lab
+
+**Already set up?** You're good — just run `claude` in the terminal to verify.
+
+> No Anthropic subscription needed. Your personal token gives you ~500k tokens included with your account.
+
+---
+
 ## Mission Brief
 
 You just joined the Acme Engineering team. Your first task: the previous developer stubbed out 5 utility functions and left before finishing them. Every function currently throws `"Not implemented"`.
