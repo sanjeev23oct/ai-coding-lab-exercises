@@ -9,7 +9,7 @@
 Claude Code is pre-installed in this Codespace and configured automatically via your **LAB_TOKEN**.
 
 **First time in any lab?** Do this once:
-1. Go to **[aicodinglab.com](https://aicodinglab.com) → Dashboard** and copy your Lab Token from the AI Credits widget
+1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`
 3. Rebuild this Codespace — Claude Code will be ready automatically for every lab
 
