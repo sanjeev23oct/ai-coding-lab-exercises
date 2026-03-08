@@ -11,11 +11,10 @@ Claude Code is pre-installed in this Codespace and configured automatically via 
 **First time in any lab?** Do this once:
 1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`, set **Repository access → sanjeev23oct/ai-coding-lab-exercises**
-3. Rebuild this Codespace — Claude Code will be ready automatically for every lab
+3. Rebuild this Codespace
+4. In the terminal, run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
 
-**Already set up?** You're good — just run `claude` in the terminal to verify.
-
-**Claude asking for login?** Re-run setup manually: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
+**Already set up?** Re-run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
 
 > No Anthropic subscription needed. Your personal token gives you ~500k tokens included with your account.
 
