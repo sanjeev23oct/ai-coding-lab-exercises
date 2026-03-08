@@ -20,6 +20,7 @@ if [ -z "$LAB_TOKEN" ]; then
   echo "║  2. Copy your Lab Token                                  ║"
   echo "║  3. Add it at github.com/settings/codespaces             ║"
   echo "║     Secret name: LAB_TOKEN                               ║"
+  echo "║     Repo access: sanjeev23oct/ai-coding-lab-exercises    ║"
   echo "║  4. Rebuild this Codespace — you're done for all labs    ║"
   echo "╚══════════════════════════════════════════════════════════╝"
   echo ""

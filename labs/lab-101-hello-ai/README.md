@@ -10,7 +10,7 @@ Claude Code is pre-installed in this Codespace and configured automatically via 
 
 **First time in any lab?** Do this once:
 1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
-2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`
+2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`, set **Repository access → sanjeev23oct/ai-coding-lab-exercises**
 3. Rebuild this Codespace — Claude Code will be ready automatically for every lab
 
 **Already set up?** You're good — just run `claude` in the terminal to verify.
