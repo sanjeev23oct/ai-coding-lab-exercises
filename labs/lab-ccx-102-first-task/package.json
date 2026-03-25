@@ -1,0 +1,9 @@
+{
+  "name": "lab-ccx-102-first-task",
+  "version": "1.0.0",
+  "description": "CCX-102: First Coding Task — fix utility functions with Claude Code",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/utils.test.js"
+  }
+}

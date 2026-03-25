@@ -1,0 +1,41 @@
+{
+  "name": "Lab CCX-302: Set Up Quality Gate Hooks",
+
+  "image": "ghcr.io/sanjeev23oct/ailab-cc-base:latest",
+
+  "postCreateCommand": "echo 'export ANTHROPIC_BASE_URL=https://litellm-anthropic-proxy-production.up.railway.app' >> ~/.bashrc && cd /workspaces/ai-coding-lab-exercises/labs/lab-ccx-302-hooks && npm install",
+
+  "postStartCommand": "bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh",
+
+  "postAttachCommand": "code /workspaces/ai-coding-lab-exercises/labs/lab-ccx-302-hooks/README.md",
+
+  "remoteEnv": {
+    "ANTHROPIC_BASE_URL": "https://litellm-anthropic-proxy-production.up.railway.app"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "RooVeterinaryInc.roo-cline",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "claudeCode.disableLoginPrompt": true,
+        "roo-cline.apiProvider": "anthropic",
+        "roo-cline.apiModelId": "claude-sonnet-4-6",
+        "roo-cline.anthropicBaseUrl": "https://litellm-anthropic-proxy-production.up.railway.app",
+        "workbench.editorAssociations": {
+          "**/README.md": "vscode.markdown.preview.editor"
+        }
+      }
+    },
+    "codespaces": {
+      "openFiles": ["labs/lab-ccx-302-hooks/README.md"]
+    }
+  },
+
+  "forwardPorts": [3000]
+}

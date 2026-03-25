@@ -1,0 +1,14 @@
+{
+  "name": "lab-ccx-202-claude-md",
+  "version": "1.0.0",
+  "description": "CCX-202: Write a Real CLAUDE.md lab",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "node --test tests/tasks.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

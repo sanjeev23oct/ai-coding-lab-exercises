@@ -1,0 +1,208 @@
+# Lab CCX-501: Project Initialisation Ritual
+
+**Track:** Claude Code Complete · **Module:** Starting a New Project Right
+**Difficulty:** Advanced · **Time:** ~45 min · **Points:** 300
+
+---
+
+> ## ⚡ Claude Code Setup — One-Time Only
+>
+> Claude Code is pre-configured automatically via your **LAB_TOKEN** Codespace secret.
+>
+> **First time?** Do this once:
+> 1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
+> 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`, set **Repository access → sanjeev23oct/ai-coding-lab-exercises**
+> 3. Rebuild this Codespace
+> 4. In the terminal, run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
+>
+> **Already set up?** Re-run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
+
+---
+
+## Mission Brief
+
+You have a `SPEC.md` with requirements for a small URL shortener API. Your job: apply the **full project initialisation ritual** before writing a single line of application code.
+
+Read `SPEC.md` first.
+
+---
+
+## The Ritual
+
+```
+1. Read SPEC.md thoroughly
+2. Run /init to generate CLAUDE.md
+3. Refine CLAUDE.md with project conventions
+4. Create .claude/rules/ for domain guidelines
+5. Create 3 skills your team will use daily
+6. Configure quality gate hooks
+7. Use Plan Mode to scaffold the project
+```
+
+---
+
+## Step 1: Run `/init`
+
+```bash
+claude
+```
+
+Run:
+
+```
+/init
+```
+
+Review what it generates. Add or fix:
+- The stack (Node.js, Express, in-memory store per SPEC.md)
+- The URL shortening conventions (codes are 6 chars, alphanumeric)
+- How errors are returned (`{ error: string }`)
+- The base URL format (`http://localhost:3000/r/<code>`)
+
+---
+
+## Step 2: Create `.claude/rules/`
+
+Create two rule files:
+
+**`.claude/rules/api.md`** (path-scoped to `src/**/*.js`):
+```markdown
+---
+paths:
+  - "src/**/*.js"
+---
+
+# API Conventions
+- Short codes: 6 alphanumeric characters, case-sensitive
+- Redirect endpoint: GET /r/:code — responds 301, not 302
+- All /api/* routes return JSON with { data: result } or { error: message }
+- Original URLs must include protocol (https:// or http://)
+- Duplicate URLs get the same short code (idempotent creation)
+```
+
+**`.claude/rules/testing.md`** (path-scoped to `tests/**`):
+```markdown
+---
+paths:
+  - "tests/**"
+---
+
+# Testing Conventions
+- Use Node.js built-in test runner (node --test)
+- Test file naming: tests/<module>.test.js
+- Always test: success case, 404/not-found, validation errors
+- Never test implementation details — test behaviour
+```
+
+---
+
+## Step 3: Create 3 Skills
+
+```bash
+mkdir -p .claude/skills/standup .claude/skills/test-report .claude/skills/api-check
+```
+
+**`.claude/skills/standup/SKILL.md`** — standup generator:
+```markdown
+---
+name: standup
+description: Generate a standup from recent commits
+---
+Recent commits:
+!`git log --oneline --since="24 hours ago"`
+
+Generate: Yesterday / Today / Blockers
+```
+
+**`.claude/skills/test-report/SKILL.md`** — test results summary:
+```markdown
+---
+name: test-report
+description: Run tests and summarise results
+---
+Run the test suite and summarise: how many pass, how many fail, and what the failures are.
+!`npm test 2>&1`
+```
+
+**`.claude/skills/api-check/SKILL.md`** — smoke test the running API:
+```markdown
+---
+name: api-check
+description: Smoke test the running URL shortener API
+allowed-tools: Bash
+---
+Test the running API:
+!`curl -s -X POST http://localhost:3000/api/shorten -H "Content-Type: application/json" -d '{"url":"https://example.com"}' || echo "Server not running"`
+
+If the server is running, also test the redirect and verify a 301 is returned.
+```
+
+---
+
+## Step 4: Configure Hooks
+
+Create `.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/block-dangerous.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*\\.js$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm test 2>&1 | tail -8 || true"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Ask Claude Code to write the block-dangerous.sh script:
+
+```
+Write .claude/hooks/block-dangerous.sh that blocks rm -rf, git push --force, and DROP TABLE commands. Make it executable.
+```
+
+---
+
+## Step 5: Scaffold with Plan Mode
+
+Enter Plan Mode (Shift+Tab twice), then:
+
+```
+Read SPEC.md and CLAUDE.md. Design the project structure for the URL shortener: what files, what each does, and in what order to implement them.
+```
+
+Review the plan. Exit Plan Mode and implement:
+
+```
+Implement the project structure from your plan. Start with package.json, then src/app.js, then the shortener logic, then tests.
+```
+
+---
+
+## Done When
+
+- [ ] `CLAUDE.md` exists (generated by `/init` and refined)
+- [ ] `.claude/rules/api.md` and `.claude/rules/testing.md` exist with path scopes
+- [ ] 3 skills created in `.claude/skills/`
+- [ ] `.claude/settings.json` has PreToolUse and PostToolUse hooks
+- [ ] URL shortener is scaffolded: `POST /api/shorten` and `GET /r/:code` work
+- [ ] `npm test` passes
+
+Head back to [ai-coding.guru](https://ai-coding.guru) to continue.

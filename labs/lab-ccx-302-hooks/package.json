@@ -1,0 +1,9 @@
+{
+  "name": "lab-ccx-302-hooks",
+  "version": "1.0.0",
+  "description": "CCX-302: Set Up Quality Gate Hooks",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/math.test.js"
+  }
+}

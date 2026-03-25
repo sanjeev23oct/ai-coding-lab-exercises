@@ -1,0 +1,9 @@
+{
+  "name": "lab-ccx-301-skills",
+  "version": "1.0.0",
+  "description": "CCX-301: Build Your Skills Library — create /standup, /security-audit, /changelog",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo 'No automated tests — verify skills manually per README'"
+  }
+}

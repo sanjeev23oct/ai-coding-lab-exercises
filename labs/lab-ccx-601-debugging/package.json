@@ -1,0 +1,13 @@
+{
+  "name": "lab-ccx-601-debugging",
+  "version": "1.0.0",
+  "description": "CCX-601: Debug a Broken Claude Code Setup",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo 'No tests yet — add them as part of the fix'"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

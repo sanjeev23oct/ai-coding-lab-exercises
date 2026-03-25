@@ -1,0 +1,15 @@
+{
+  "name": "lab-ccx-201-workflow",
+  "version": "1.0.0",
+  "description": "CCX-201: Explore → Plan → Implement workflow lab",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "node --test tests/tasks.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
