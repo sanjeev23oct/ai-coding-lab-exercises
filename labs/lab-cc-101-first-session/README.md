@@ -1,23 +1,5 @@
 # Lab CC-101: Your First Claude Code Session
 
-> **Claude Code Trail · Beginner · ~30 min · 200 XP**
-
----
-
-> ## ⚡ Claude Code Setup — One-Time Only
->
-> Claude Code is pre-configured automatically via your **LAB_TOKEN** Codespace secret.
->
-> **First time?** Do this once:
-> 1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
-> 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`, set **Repository access → sanjeev23oct/ai-coding-lab-exercises**
-> 3. Rebuild this Codespace
-> 4. In the terminal, run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
->
-> **Already set up?** Re-run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
-
----
-
 ## Mission Brief
 
 You've joined a team that inherited a half-finished task manager API. The previous dev left 3 bugs and 3 unimplemented endpoints before shipping. The tests are written — they're all failing.
@@ -48,7 +30,6 @@ claude
 2. **Usage data prompt** — press **Enter** to accept (or arrow key to **No** and Enter to decline)
 3. **You're in!** — you'll see the `>` prompt. Claude Code is ready.
 
-If `claude` is not found, run `npm install -g @anthropic-ai/claude-code` then try again.
 
 ```bash
 # Start Claude Code (interactive mode)
@@ -197,9 +178,6 @@ Expected output:
 ---
 
 ## When Things Go Wrong
-
-**`claude` command not found**
-Run `npm install -g @anthropic-ai/claude-code` — it should already be installed but re-installs are fine.
 
 **Tests hang and don't exit**
 The server didn't shut down cleanly. Run `npm test` again — it usually resolves itself.
