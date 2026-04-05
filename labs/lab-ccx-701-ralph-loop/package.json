@@ -1,0 +1,15 @@
+{
+  "name": "lab-ccx-701-ralph-loop",
+  "version": "1.0.0",
+  "description": "CCX-701: The Ralph Loop — autonomous feature building",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "node --test tests/notes.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
