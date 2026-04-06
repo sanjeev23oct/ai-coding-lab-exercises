@@ -1,0 +1,15 @@
+{
+  "name": "lab-ccx-901-ecc",
+  "version": "1.0.0",
+  "description": "CCX-901: Everything Claude Code — install agents, use them, observe the difference",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "node --test tests/products.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
