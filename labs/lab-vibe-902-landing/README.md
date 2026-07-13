@@ -4,17 +4,9 @@
 
 ---
 
-> ## ⚡ Claude Code Setup — One-Time Only
+> ## ⚡ Claude Code
 >
-> Claude Code is pre-configured automatically via your **LAB_TOKEN** Codespace secret.
->
-> **First time?** Do this once:
-> 1. Go to **[ai-coding.guru/settings](https://ai-coding.guru/settings) → API Keys** and copy your Lab Token
-> 2. Add it at **[github.com/settings/codespaces](https://github.com/settings/codespaces)** — secret name: `LAB_TOKEN`, set **Repository access → sanjeev23oct/ai-coding-lab-exercises**
-> 3. Rebuild this Codespace
-> 4. In the terminal, run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
->
-> **Already set up?** Re-run: `bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh`
+> Already installed and signed in — no setup needed. Just run `claude`.
 
 ---
 
@@ -78,10 +70,10 @@ clean, white with a bold accent colour, good typography. Make it look funded.
 Preview it:
 
 ```bash
-npx serve . -p 3000
+npx serve . -l 3000
 ```
 
-Open the **Ports** tab → click the port 3000 link.
+**To view it:** look at your browser's address bar right now — it's the URL for this lab, something like `https://sandbox.ai-coding.guru/cc-lab/session/<id>/?t=<id>`. Copy it into a new tab and insert `proxy/3000/` right before the `?t=`, so it reads `.../cc-lab/session/<id>/proxy/3000/?t=<id>`. That's your live preview — refresh it after each change.
 
 ---
 
@@ -173,7 +165,7 @@ No automated tests. Would you click "Join waitlist"? That's the bar.
 **`npx serve` not found**
 ```bash
 npm install -g serve
-serve . -p 3000
+serve . -l 3000
 ```
 
 **The design looks dated**
