@@ -4,7 +4,7 @@
 
 You've joined a team that inherited a half-finished task manager API. The previous dev left 3 bugs and 3 unimplemented endpoints before shipping. The tests are written — they're all failing.
 
-Your job: **use Claude Code to read the codebase, understand what's broken, and make all 14 tests pass.**
+Your job: **use Claude Code to read the codebase, understand what's broken, and make all 13 tests pass.**
 
 The rule: **you direct, Claude Code implements.** You don't write application code manually. You read what it writes, verify it works, and iterate.
 
@@ -12,9 +12,7 @@ The rule: **you direct, Claude Code implements.** You don't write application co
 
 ## Your Tool: Claude Code
 
-Claude Code is a terminal AI agent that reads your files, edits code, and runs commands — all from your instructions. It's pre-configured in this sandbox.
-
-> **No subscription needed.** This sandbox uses Claude Code pointed at an AI coding-optimised model via a compatibility proxy — you get the full experience for free.
+Claude Code is a terminal AI agent that reads your files, edits code, and runs commands — all from your instructions. It's pre-installed and already signed in — no login, no setup.
 
 ### Starting Claude Code for the First Time
 
@@ -24,11 +22,7 @@ Open a terminal (**Terminal → New Terminal** in the menu) and run:
 claude
 ```
 
-**First-run setup** (only once per Codespace):
-
-1. **Theme picker appears** — use arrow keys to select **Dark** or **Light**, then press **Enter**
-2. **Usage data prompt** — press **Enter** to accept (or arrow key to **No** and Enter to decline)
-3. **You're in!** — you'll see the `>` prompt. Claude Code is ready.
+You'll land straight at the `>` prompt — no theme picker, no login, no setup steps. Claude Code is ready to go.
 
 
 ```bash
@@ -171,7 +165,7 @@ Expected output:
 ▶ GET /tasks/stats
   ✓ returns total, done, and pending counts
 
-✓ passing: 14
+✓ passing: 13
 ✗ failing: 0
 ```
 

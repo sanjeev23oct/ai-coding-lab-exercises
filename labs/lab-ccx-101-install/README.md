@@ -35,11 +35,7 @@ npm install -g @anthropic-ai/claude-code
 claude auth status
 ```
 
-You should see your account details. If it says "not authenticated", run the setup script:
-
-```bash
-bash /workspaces/ai-coding-lab-exercises/scripts/setup-claude.sh
-```
+You should see your account details — this sandbox comes pre-authenticated, so you shouldn't need to log in. If it ever says "not authenticated," close this lab and relaunch it from the module page for a fresh session. If that doesn't fix it, it's a sandbox issue on our end, not something you can resolve here.
 
 ---
 
@@ -87,21 +83,13 @@ Claude Code will explain the `~/.claude/` directory, the auth flow, and how API 
 
 ## Task 6 — Check Your Config
 
-Exit Claude Code (`/exit` or Ctrl+C), then inspect the auth file:
+Exit Claude Code (`/exit` or Ctrl+C), then look at where your credentials live:
 
 ```bash
-cat ~/.claude.json
+cat ~/.claude/.credentials.json
 ```
 
-You should see something like:
-```json
-{
-  "primaryApiKey": "...",
-  "hasCompletedOnboarding": true
-}
-```
-
-This is the file Claude Code reads at startup to authenticate. Your Lab Token is pre-configured here — that's why you didn't need to log in manually.
+You'll see an OAuth token, not an API key — this sandbox is signed into a real Claude account, pre-loaded for you. That's why `claude auth status` showed `"authMethod": "claude.ai"` earlier instead of an API key.
 
 ---
 
@@ -136,7 +124,7 @@ This checks your installation, auth, settings, and reports any issues. Read the 
 ## What You Just Learned
 
 - Claude Code works in two modes: **interactive** (a session with memory) and **print** (`claude -p "..."` for one-shot queries)
-- Authentication lives in `~/.claude.json` — no browser sign-in needed in Codespaces
+- Authentication lives in `~/.claude/`, pre-configured in this sandbox — no browser sign-in needed
 - `/doctor` is your first debugging tool
 
 Head back to [ai-coding.guru](https://ai-coding.guru) to continue.

@@ -27,13 +27,7 @@ Open a terminal (**Terminal → New Terminal** in the menu) and run:
 claude
 ```
 
-**First-run setup** (only if the wizard appears — once per Codespace):
-
-1. **Theme picker** — use arrow keys to choose **Dark** or **Light**, then press **Enter**
-2. **Usage data prompt** — press **Enter** to accept (or arrow key to **No**, then Enter)
-3. **You're in!** — the `>` prompt appears. Claude Code is ready.
-
-> If `claude` is not found, run `npm install -g @anthropic-ai/claude-code` and try again.
+You'll land straight at the `>` prompt — this sandbox is pre-authenticated, no setup wizard.
 
 ---
 
